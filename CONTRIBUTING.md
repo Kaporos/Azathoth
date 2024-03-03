@@ -14,3 +14,6 @@ But here is how this works for now:
 `stores` package contains all code to load elements from TOML files.
 
 `components` package contains all code used to render core element to TUI
+
+
+Commands user can give to the MUD are handled in `core/commands.go`

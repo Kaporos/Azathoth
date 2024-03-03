@@ -7,7 +7,6 @@ import (
 	"github.com/charmbracelet/lipgloss"
 	"github.com/kaporos/azathoth/components"
 	"github.com/kaporos/azathoth/core"
-	"github.com/kaporos/azathoth/stores"
 )
 
 type Model struct {
@@ -23,8 +22,6 @@ type Model struct {
 // This Init will update m , the bubbletea Init below cannot change m because of its signature
 func (m *Model) InitMutable() {
 	//Giving the player basics items at log-in
-	m.player.GiveItem(stores.CreateItemSure("apple"))
-	m.player.GiveItem(stores.CreateItemSure("skin"))
 }
 
 // bubbletea init method. required to have but it does not do anything.

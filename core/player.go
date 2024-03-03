@@ -28,11 +28,25 @@ func (i *Inventory) contains(s string) bool {
 	return false
 }
 
-func (i *Player) GiveItem(s stores.Item) {
-	i.Inventory = append(i.Inventory, s)
+func (p *Player) InitPlayer() {
+	p.health = 100
+	p.stamina = 100
+	p.stamina = 100
+	p.GiveItem(stores.CreateItemSure("apple"))
+	p.GiveItem(stores.CreateItemSure("skin"))
+
 }
-func (i *Player) Health() int {
-	return i.health
+func (p *Player) GiveItem(s stores.Item) {
+	p.Inventory = append(p.Inventory, s)
+}
+func (p *Player) Health() int {
+	return p.health
+}
+func (p *Player) Mana() int {
+	return p.mana
+}
+func (p *Player) Stampna() int {
+	return p.stamina
 }
 
 func remove(inv Inventory, s string) Inventory {
@@ -52,11 +66,18 @@ func (p *Player) Move(deltaX, deltaY int) {
 }
 
 func (p *Player) Heal() {
+	if p.mana <= 20 {
+		return
+	}
 	if p.health >= 90 {
 		return
 	}
 	p.health += 10
 	p.mana -= 20
+}
+
+func (p *Player) Hurt(damages int) {
+	p.health -= damages
 }
 
 func (p *Player) Clock() {
