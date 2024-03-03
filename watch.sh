@@ -4,8 +4,7 @@
 # Function to compile and run the server
 run_server() {
     echo "Compiling and running the server..."
-    go build -o /tmp/neo-mud .
-    /tmp/neo-mud 4000 &
+    go build -o /tmp/neo-mud . && /tmp/neo-mud 4000 &
     SERVER_PID=$!
 }
 
@@ -27,7 +26,8 @@ trap stop_server SIGINT
 while inotifywait --exclude '\.git' -e modify,move,create,delete -r .; do
     echo "Changes detected. Restarting the server..."
     # Kill the previous server process
-    kill $SERVER_PID
+    killall neo-mud
+    sleep 1
     clear
     # Compile and run the server again
     run_server

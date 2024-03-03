@@ -1,4 +1,4 @@
-module github.com/kaporos/neomud
+module github.com/kaporos/azathoth
 
 go 1.21.6
 

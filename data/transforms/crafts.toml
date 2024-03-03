@@ -1,0 +1,14 @@
+[craft]
+[craft.receipe.log]
+input=["tree"]
+output=["log"]
+
+[tan]
+[tan.receipe.skin]
+input=["skin"]
+output=["leather"]
+
+[sew]
+[sew.receipe.bag]
+input=["leather"]
+output=["bag"]

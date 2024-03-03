@@ -1,0 +1,29 @@
+[items]
+[items.tree]
+display_name="a large tree"
+weight=3
+
+[items.log]
+display_name="some wood log"
+weight = 1
+
+[items.rock]
+display_name="a rock"
+weight=1
+
+[items.apple]
+display_name="an apple"
+weight=1
+nutrition=1
+
+[items.skin]
+display_name="a skin"
+weight=1
+
+[items.leather]
+display_name="some leather"
+weight=1
+
+[items.bag]
+display_name="a beautiful bag"
+weight=1
