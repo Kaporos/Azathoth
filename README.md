@@ -1,4 +1,4 @@
-# Neo MUD
+# Azathoth
 
 This project is still an in-development proof of concept.
 
@@ -6,11 +6,11 @@ This project is still an in-development proof of concept.
 
 To run the server, simply run
 
-    go run . 4000
+    go run .
 
 To connect, simply run
 
-    nc 127.0.0.1 4000
+    ssh 127.0.0.1 -p 4022
 
 ## Dev
 
