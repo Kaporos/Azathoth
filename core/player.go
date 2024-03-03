@@ -62,7 +62,6 @@ func remove(inv Inventory, s string) Inventory {
 func (p *Player) Move(deltaX, deltaY int) {
 	p.position.x += deltaX
 	p.position.y += deltaY
-
 }
 
 func (p *Player) Heal() {

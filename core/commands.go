@@ -13,7 +13,8 @@ func parseCommand(cmd string) (commandName string, args []string) {
 
 func ProcessCommand(p *Player, cmd string) string {
 	commandName, args := parseCommand(cmd)
-	if commandName == "give" {
+	switch commandName {
+	case "give":
 		if len(args) == 0 {
 			return "Usage: give <item>"
 		}
@@ -23,6 +24,12 @@ func ProcessCommand(p *Player, cmd string) string {
 		}
 		p.GiveItem(item)
 		return "God just gave you " + item.DisplayName
+	case "hurt":
+		p.Hurt(1)
+		return "Have I gone mad?"
+	case "heal":
+		p.Heal()
+		return "I feel better :)"
 	}
 	return "Huh ?!"
 }
