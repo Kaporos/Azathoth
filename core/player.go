@@ -30,7 +30,7 @@ func (i *Inventory) contains(s string) bool {
 
 func (p *Player) InitPlayer() {
 	p.health = 100
-	p.stamina = 100
+	p.mana = 100
 	p.stamina = 100
 	p.GiveItem(stores.CreateItemSure("apple"))
 	p.GiveItem(stores.CreateItemSure("skin"))

@@ -22,6 +22,7 @@ type Model struct {
 // This Init will update m , the bubbletea Init below cannot change m because of its signature
 func (m *Model) InitMutable() {
 	//Giving the player basics items at log-in
+	m.player.InitPlayer()
 }
 
 // bubbletea init method. required to have but it does not do anything.
