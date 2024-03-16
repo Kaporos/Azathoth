@@ -38,7 +38,7 @@ func RenderPlayerStats(p *core.Player) string {
 		stampnaStr = color.YellowString("%d", stampna)
 	}
 
-	stats := fmt.Sprintf("Health: %s | Mana: %s | Stampna: %s\n\n", healthStr, manaStr, stampnaStr)
+	stats := fmt.Sprintf("Health: %s | Mana: %s | Stamina: %s\n\n", healthStr, manaStr, stampnaStr)
 	stats += RenderPlayerInventory(p)
 	return stats
 }
